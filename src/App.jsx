@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Provider } from "react-redux";
+import  store  from "./redux/store";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  return(<Provider store={store }>
+    <p>Hello</p>
 
-  return (
-    <>
-      <div className='text-5xl'>Hello world</div>
-    </>
-  )
+  </Provider>)
 }
 
-export default App
+export default App;
