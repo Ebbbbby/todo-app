@@ -15,6 +15,8 @@ const Todo = () => {
     dispatch(addTodo(text));
   };
 
+
+
   const handleAddTodoClick = () => {
     if (newTodoText.trim() !== "") {
       handleAddTodo(newTodoText.trim());

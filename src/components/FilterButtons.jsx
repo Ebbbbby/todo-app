@@ -20,7 +20,7 @@ const FilterButtons = () => {
       >
         <option value="ALL">Default</option>
         <option value="COMPLETED">Completed</option>
-        <option value="INCOMPLETED">INCOMPLETED</option>\{" "}
+        <option value="INCOMPLETED">Incompleted</option>\{" "}
       </select>
 
       <button className="text-sm px2 py-1 bg-purple-500 text-white ml-2 rounded" onClick={()=> dispatch(markAllCompleted) }>
