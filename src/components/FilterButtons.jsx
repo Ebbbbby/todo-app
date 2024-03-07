@@ -1,11 +1,12 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { filteredTodos } from "../redux/actions";
+import { filteredTodos, markAllCompleted } from "../redux/actions";
 
 const FilterButtons = () => {
   const dispatch = useDispatch();
 
   const currentFilter = useSelector((state) => state.filter);
+
   const handleFilter = (filter) => {
     dispatch(filteredTodos(filter));
   };
@@ -22,7 +23,7 @@ const FilterButtons = () => {
         <option value="INCOMPLETED">INCOMPLETED</option>\{" "}
       </select>
 
-      <button className="text-sm px2 py-1 bg-purple-500 text-white ml-2 rounded">
+      <button className="text-sm px2 py-1 bg-purple-500 text-white ml-2 rounded" onClick={()=> dispatch(markAllCompleted) }>
         Mark All Completed
       </button>
     </div>
